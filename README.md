@@ -63,7 +63,7 @@ For each sample, the target variable is the speaker’s age, represented as a co
 ---
 
 ### Dataset Contents:
-The dataset is located at [this URL](#).
+The dataset is divided into several files:
 
 - **development.csv (development set)**: A comma-separated values file containing the 2,933 samples for the development set. This portion includes the target age for each sample, which is used to train and validate your models.
 - **evaluation.csv (evaluation set)**: A comma-separated values file containing the 691 samples corresponding to the evaluation set. This portion does not contain the age target.
@@ -83,16 +83,16 @@ You are required to build a **regression pipeline** to predict the **age of the 
 
 Your submissions will be evaluated in terms of the **Root Mean Square Error (RMSE)** between your predictions and the target values. RMSE is a standard metric for regression tasks that measures the **average magnitude of the error**.  
 
-For a single prediction with target \(y_1\) and prediction \(\hat{y}_1\), the squared error is:  
+For a single prediction with target $y_1$ and prediction $\hat{y}_1$, the squared error is:  
 
-\[
+$$
 (y_1 - \hat{y}_1)^2
-\]
+$$
 
-For all \(n\) samples with targets \(y_1, y_2, \dots, y_n\) and predictions \(\hat{y}_1, \hat{y}_2, \dots, \hat{y}_n\), the RMSE is computed as:  
+For all $n$ samples with targets $y_1, y_2, \dots, y_n$ and predictions $\hat{y}_1, \hat{y}_2, \dots, \hat{y}_n$, the RMSE is computed as:  
 
-\[
+$$
 \text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}
-\]
+$$
 
 This metric provides an **aggregate measure of prediction accuracy**, penalizing **larger errors** more significantly than smaller ones.
